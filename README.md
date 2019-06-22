@@ -7,9 +7,9 @@ Alternate Project Name: **Project Swift - Home Automation**
 
 Course Title: **Software Development for Portable Devices**
 
-Course Instructor: **Prof. Sreejith V**
+Course Instructor: **Prof. Sreejith V, Visiting Assistant Professor, Department of Computer Science and Information Systems, BITS Pilani K K Birla Goa Campus**
 
-Project Supervisor: **Prof. Sreejith V**
+Project Supervisor: **Prof. Sreejith V, Visiting Assistant Professor, Department of Computer Science and Information Systems, BITS Pilani K K Birla Goa Campus**
 
 Project Contributors:
 
