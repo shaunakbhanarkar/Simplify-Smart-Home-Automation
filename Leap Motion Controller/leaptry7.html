@@ -1,0 +1,178 @@
+<!--this code is working. do not manipulate.-->
+<html>
+  <head>
+    <title>Leap Gestures</title>
+    <script src="http://js.leapmotion.com/leap-0.6.4.js"></script>
+    <script>
+
+        
+        var controller = Leap.loop({enableGestures: true}, function(frame){
+                  
+            var str = "";
+            var cir=0;
+                if(frame.valid && frame.gestures.length > 0){
+                    frame.gestures.forEach(function(gesture){
+                        switch (gesture.type){
+                          case "circle":
+                //              
+//                                console.log("Circle Gesture");
+                                output.innerHTML = "circle gesture found, processing...";
+                                
+                                var myref = firebase.database().ref();
+
+                                var status1 = myref.child('/led1/status');
+                                status1.once('value',function(snapshot){
+                                    
+                                    if (snapshot.val() == 'ON')
+                                        {
+                                            var updates={};
+                                            //if(cir==0)
+                                           updates['/led1/status']='OFF';
+                                           // else
+                                                // updates['/led1/status']='OFF';
+                                            firebase.database().ref().update(updates);
+                                            output.innerHTML = "LED1 was on, LED1 is now turned off";
+                                        }
+                                    else
+                                        {
+                                            var updates={};
+                                            //if(cir==0)
+                                           updates['/led1/status']='ON';
+                                           // else
+                                                // updates['/led1/status']='OFF';
+                                            firebase.database().ref().update(updates);
+                                            output.innerHTML = "LED1 was off,LED1 is now turned on";
+                                        }
+
+                                })
+                                
+
+
+                              break;
+                          case "keyTap":
+                                                output.innerHTML = "keytap gesture found, processing...";
+                                
+                                var myref = firebase.database().ref();
+
+                                var status1 = myref.child('/led3/status');
+                                status1.once('value',function(snapshot){
+                                    
+                                    if (snapshot.val() == 'ON')
+                                        {
+                                            var updates={};
+                                            //if(cir==0)
+                                           updates['/led3/status']='OFF';
+                                           // else
+                                                // updates['/led1/status']='OFF';
+                                            firebase.database().ref().update(updates);
+                                            output.innerHTML = "LED3 was on, LED3 is now turned off";
+                                        }
+                                    else
+                                        {
+                                            var updates={};
+                                            //if(cir==0)
+                                           updates['/led3/status']='ON';
+                                           // else
+                                                // updates['/led1/status']='OFF';
+                                            firebase.database().ref().update(updates);
+                                            output.innerHTML = "LED3 was off, LED3 is now turned on";
+                                        }
+
+                                })
+                                
+
+
+                              break;
+                          case "screenTap":
+                                output.innerHTML = "screentap gesture found, processing...";
+                                
+                                var myref = firebase.database().ref();
+
+                                var status1 = myref.child('/led3/status');
+                                status1.once('value',function(snapshot){
+                                    
+                                    if (snapshot.val() == 'ON')
+                                        {
+                                            var updates={};
+                                            //if(cir==0)
+                                           updates['/led3/status']='OFF';
+                                           // else
+                                                // updates['/led1/status']='OFF';
+                                            firebase.database().ref().update(updates);
+                                            output.innerHTML = "LED3 was on, LED3 is now turned off";
+                                        }
+                                    else
+                                        {
+                                            var updates={};
+                                            //if(cir==0)
+                                           updates['/led3/status']='ON';
+                                           // else
+                                                // updates['/led1/status']='OFF';
+                                            firebase.database().ref().update(updates);
+                                            output.innerHTML = "LED3 was off, LED3 is now turned on";
+                                        }
+
+                                })
+                                
+
+
+                              break;
+                          case "swipe":
+                                output.innerHTML = "swipe gesture found, processing...";
+                                
+                                var myref = firebase.database().ref();
+
+                                var status1 = myref.child('/led2/status');
+                                status1.once('value',function(snapshot){
+                                    
+                                    if (snapshot.val() == 'ON')
+                                        {
+                                            var updates={};
+                                            //if(cir==0)
+                                           updates['/led2/status']='OFF';
+                                           // else
+                                                // updates['/led1/status']='OFF';
+                                            firebase.database().ref().update(updates);
+                                            output.innerHTML ="LED2 was on, LED2 is now turned off";
+                                        }
+                                    else
+                                        {
+                                            var updates={};
+                                            //if(cir==0)
+                                           updates['/led2/status']='ON';
+                                           // else
+                                                // updates['/led1/status']='OFF';
+                                            firebase.database().ref().update(updates);
+                                            output.innerHTML =  "LED2 was off, LED2 is now turned on";
+                                        }
+
+                                })
+                                
+
+
+                              break;
+                        }
+        });
+  }
+});
+
+    </script>
+      <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAJudxDMfwCmhASQr2qR248riJmQnCnX5o",
+    authDomain: "sdpd-communication.firebaseapp.com",
+    databaseURL: "https://sdpd-communication.firebaseio.com",
+    projectId: "sdpd-communication",
+    storageBucket: "sdpd-communication.appspot.com",
+    messagingSenderId: "115793575269"
+  };
+  firebase.initializeApp(config);
+</script>
+  </head>
+  <body>
+    <div id="output">Wave your hand..</div>
+     
+  </body>
+</html>
