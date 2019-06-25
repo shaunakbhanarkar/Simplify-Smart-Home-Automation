@@ -12,3 +12,5 @@ Learn more at the official website: https://www.leapmotion.com
 We use the hardware platform named *Leap Motion Controller* to sense and categorise the hand gestures.
 
 The software platform is used in the form of JavaScript API named *leap.js* to handle the code.
+
+*The code file named leap_gesture_detection.html is the only file that needs to be executed.*
