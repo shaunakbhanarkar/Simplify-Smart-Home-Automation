@@ -20,5 +20,5 @@ To learn more, visit https://developer.android.com/guide/topics/sensors/sensors_
 
 We use two sensors, namely *Accelerometer and Magnetomer*, in the Shake app to determine the home device which needs to be operated.
 
-The entire Android project along with code can be found in my respository named ShakeApp.
+*The entire Android project along with code can be found in my respository named ShakeApp.*
 
