@@ -26,3 +26,9 @@ Project Description:
 - **Development of an Android application that operates home devices using Optical Character Recognition.**
 - **Recognising and categorising hand gestures using Leap Motion Controller to operate home devices.**
 
+Related Repositories:
+
+https://github.com/shaunakbhanarkar/ShakeApp
+
+https://github.com/shaunakbhanarkar/ocr-reader
+
