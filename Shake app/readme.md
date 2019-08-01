@@ -22,3 +22,4 @@ We use two sensors, namely *Accelerometer and Magnetomer*, in the Shake app to d
 
 *The entire Android project along with code can be found in my respository named ShakeApp.*
 
+Link: https://github.com/shaunakbhanarkar/ShakeApp
