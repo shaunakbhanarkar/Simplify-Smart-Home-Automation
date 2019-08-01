@@ -19,3 +19,5 @@ We use the technique of *Optical Character Recognition* by scanning the image or
 Once the text is identified, appropriate action is taken by sending the data to the dababase and then communicating with the home device.
 
 *The entire Android project along with code can be found my respository named ocr-reader.*
+
+Link: https://github.com/shaunakbhanarkar/ocr-reader
